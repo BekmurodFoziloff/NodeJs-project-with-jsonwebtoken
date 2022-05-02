@@ -1,0 +1,23 @@
+<h3>Yangilik qo'shish sahifasi</h3>
+{{#if error}}
+    <p class="alert">{{error}}</p>
+{{/if}}
+<form action="/add" method="POST" novalidate>
+    <div class="input-field">
+        <input id="img" name="img" type="url" class="validate" required value="{{{data.img}}}">
+        <label for="img">Rasm URL</label>
+        <span class="helper-text" data-error="Rasm URLni kiriting"></span>
+    </div>
+    <div class="input-field">
+        <input id="head" name="head" type="text" class="validate" required value="{{{data.head}}}">
+        <label for="head">Sarlavha</label>
+        <span class="helper-text" data-error="Sarlavhani kiriting"></span>
+    </div>
+    {{!-- <div class="input-field">
+        <textarea id="text" name="text" class="materialize-textarea" required>{{{data.text}}}</textarea>
+        <span class="helper-text" data-error="Matnni kiriting"></span>
+    </div> --}}
+    <textarea id="mytextarea" name="text" required>{{{data.text}}}</textarea>
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button class="btn btn-primary" type="submit">Qo'shish</button>
+</form>

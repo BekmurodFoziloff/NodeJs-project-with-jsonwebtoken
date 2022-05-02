@@ -1,0 +1,44 @@
+.nav-wrapper {
+    padding: 0 2rem;
+}
+
+.auth {
+    padding-top: 1rem;
+}
+
+.news {
+    padding-left: 18rem;
+}
+
+.edit {
+    padding-left: 4.3cm;
+}
+
+.delete {
+    padding-top: 1rem;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item img {
+    max-width: 500px;
+    height: auto;
+}
+ 
+.item p {
+    text-align: justify;
+}
+
+.alert {
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: rgba(255, 0, 0, .3);
+    color: red;
+}

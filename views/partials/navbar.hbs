@@ -1,0 +1,35 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Sun'iy intellekt</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isHome}}
+        <li class="active"><a href="/">Bosh sahifa</a></li>
+      {{else}}
+        <li><a href="/">Bosh sahifa</a></li>
+      {{/if}}
+
+      {{#if isNews}}
+        <li class="active"><a href="/news">Yangiliklar</a></li>
+      {{else}}
+        <li><a href="/news">Yangiliklar</a></li>
+      {{/if}}
+      {{#if isAuth}}
+        {{#if isAdd}}
+          <li class="active"><a href="/add">Yangilik qo'shish</a></li>
+        {{else}}
+          <li><a href="/add">Yangilik qo'shish</a></li>
+        {{/if}}
+
+        <li><a href="/auth/logout">Chiqish</a></li>
+      {{else}}
+        {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Kirish</a></li>
+        {{else}}
+          <li><a href="/auth/login#login">Kirish</a></li>
+        {{/if}}
+      {{/if}}
+
+    </ul>
+  </div>
+</nav>

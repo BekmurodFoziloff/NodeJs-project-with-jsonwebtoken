@@ -1,0 +1,26 @@
+<h3>Tahrirlash</h3>
+<form action="/news/edit" method="POST">
+    <div class="input-field">
+        <input id="img" name="img" type="url" class="validate" required value="{{item.img}}">
+        <label for="img">Rasm URL</label>
+        <span class="helper-text" data-error="Rasm URLni kiriting"></span>
+    </div>
+    <div class="input-field">
+        <input id="head" name="head" type="text" class="validate" required value="{{item.head}}">
+        <label for="head">Sarlavha</label>
+        <span class="helper-text" data-error="Sarlavhani kiriting"></span>
+    </div>
+    {{!-- <div class="input-field">
+        <textarea id="text" name="text" class="materialize-textarea" required>{{item.text}}</textarea>
+        <span class="helper-text" data-error="Matnni kiriting"></span>
+    </div> --}}
+    <textarea id="mytextarea" name="text" required>{{item.text}}</textarea>
+    <input type="hidden" name="id" value="{{item._id}}">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button class="btn btn-primary" type="submit">Tahrirlash</button>
+</form>
+<form action="/news/remove" method="post" class="delete">
+    <input type="hidden" name="id" value="{{item._id}}">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button class="btn red" type="submit">O'chirish</button>
+</form>

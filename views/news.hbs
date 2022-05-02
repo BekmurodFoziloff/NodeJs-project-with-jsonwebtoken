@@ -1,0 +1,29 @@
+<h1>Yangiliklar</h1>
+{{#if items.length}}
+  {{#each items}}
+    <div class="news">
+      <div class="row">
+        <div class="col s12 m8">
+          <div class="card">
+            <div class="card-image">
+              <img src="{{img}}">
+            </div>
+            <div class="card-content">
+              <p>{{head}}</p>
+            </div>
+            <div class="card-action">
+              <a href="/news/{{_id}}" target="_blank">Ochish</a>
+              {{#if @root.isAuth}}
+                {{#ifeq userId._id @root.userId }}
+                  <a href="/news/{{_id}}/edit?allow=true" class="edit">Tahrirlash</a>
+                {{/ifeq}}
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <p>Hozircha yangilik yo'q</p>
+{{/if}}
